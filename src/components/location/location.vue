@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import styles from "./styles.module.css";
   
-  const props = defineProps({
+  defineProps({
     text: String,
   })
 </script>

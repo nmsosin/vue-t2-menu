@@ -1,0 +1,36 @@
+.navbar {
+  background-color: #fff;
+  color: #7C8792;
+  height: 47px;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 40px;
+
+  ul {
+    padding: 0;
+    width: 100%;
+    max-width: 1116px;
+    margin: 0 auto;
+    list-style-type: none;
+    display: flex;
+    gap: 18px;
+    font-size: 14px;
+    line-height: 18px;
+
+    .navlink {
+      cursor: pointer;
+      
+      &.active {
+        color: #1F2229;
+        text-decoration: underline;
+        text-underline-offset: 18px;
+        text-decoration-thickness: 2px;
+      }
+      
+      &:hover {
+        opacity: .8;
+      }
+    }
+  }
+}
