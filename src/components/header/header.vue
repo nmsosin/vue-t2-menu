@@ -9,7 +9,7 @@
     <div :class="styles.container">
       <img src="../../assets/logo.svg" :class="styles.logo" alt="T2 logo" />
       <div :class="styles.info">
-        <Location text="Москва и область"/>
+        <Location text="Москва и область" :is-desktop="true"/>
         <Notification />
       </div>
     </div>

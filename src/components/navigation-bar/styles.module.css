@@ -1,22 +1,40 @@
 .navbar {
   background-color: #fff;
   color: #7C8792;
-  height: 47px;
   display: flex;
   align-items: center;
   position: sticky;
   top: 40px;
+  @media (max-width: 870px) {
+    align-items: start;
+    flex-direction: column;
+  }
+
 
   ul {
     padding: 0;
     width: 100%;
     max-width: 1116px;
+    height: 47px;
     margin: 0 auto;
     list-style-type: none;
     display: flex;
+    align-items: center;
     gap: 18px;
     font-size: 14px;
     line-height: 18px;
+    border-bottom: 1px solid #D3D9DF;
+
+    @media (max-width: 870px) {
+      box-sizing: border-box;
+      padding: 24px 15px 0;
+      flex-direction: column;
+      align-items: start;
+      height: 545px;
+      margin: 0;
+      gap: 16px;
+      border-bottom: none;
+    }
 
     .navlink {
       cursor: pointer;
@@ -31,6 +49,30 @@
       &:hover {
         opacity: .8;
       }
+
+      @media (max-width: 870px) {
+        width: 100%;
+        padding-bottom: 8px;
+        border-bottom: 1px solid #EDEDED;
+
+        &.active {
+          color: #1F2229;
+          text-decoration: none;
+          border-bottom: 2px solid #1F2229;
+        }
+      }
+    }
+  }
+
+  .location_wrapper {
+    display: none;
+    background-color: #F3F5F6;
+    width: 100%;
+    height: 56px;
+    align-items: center;
+
+    @media (max-width: 870px) {
+      display: flex;
     }
   }
 }

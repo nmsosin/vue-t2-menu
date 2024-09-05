@@ -1,17 +1,19 @@
 <script setup lang="ts">
   import styles from "./styles.module.css";
   import links from "./config";
-  import { ref } from "vue";
+  import Location from "../location/location.vue";
 
-  const activeTab = ref(1);
+  import { useMenuStore } from "../../stores/menuStore";
+
+  const menuStore = useMenuStore();
+
   const setActiveTab = (active: number) => {
-    activeTab.value = active;
-    console.log(active, activeTab.value);
-  }
-  const checkIsActive = (currentTab: number) => {
-    return currentTab === activeTab.value;
+    menuStore.setCurrentTab(active);
   }
 
+  const checkIsActive = (currentTab: number) => {
+    return currentTab === menuStore.currentTab;
+  }
 
 </script>
 
@@ -27,5 +29,8 @@
         {{ link.text }}
       </li>
     </ul>
+    <div :class="styles.location_wrapper">
+      <Location text="Москва и область" :is-desktop="false"/>
+    </div>
   </nav>
 </template>

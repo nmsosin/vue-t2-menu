@@ -4,7 +4,7 @@ import NavigationBar from './components/navigation-bar/navigation-bar.vue'
 </script>
 
 <template>
-  <div>
+  <div class="application">
     <Header />
     <NavigationBar />
     <div class="content">
@@ -20,10 +20,15 @@ import NavigationBar from './components/navigation-bar/navigation-bar.vue'
 </template>
 
 <style scoped>
+  .application {
+    position: relative;
+  }
+
   .content {
     background-color: #7157cf;
     width: 100%;
-    height: 100vh;
+    padding-bottom: 200px;
+    
     p {
       margin: 0;
       padding-top: 50px;

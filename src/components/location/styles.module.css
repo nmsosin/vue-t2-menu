@@ -1,5 +1,20 @@
 .location {
-  display: flex;
   color: #7C8792;
   cursor: pointer;
+}
+
+.location_desktop {
+  display: flex;
+  
+    @media (max-width: 870px) {
+      display: none;
+    }
+}
+
+.location_mobile {
+  display: none;
+
+  @media (max-width: 870px) {
+    display: flex;
+  }
 }

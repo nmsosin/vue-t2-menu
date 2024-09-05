@@ -1,8 +1,12 @@
 <script setup lang="ts">
+  const handleNotificationClick = () => {
+    alert("Notification click handler")
+  }
+
 </script>
 
 <template>
-  <div class="notification-box">
+  <div class="notification-box" @click="handleNotificationClick">
     <span class="notification-count"></span>
     <div class="notification-bell">
       <img src="../../assets/bell.svg" alt="bell">
@@ -18,6 +22,7 @@
   height: 27px;
   text-align: center;
   cursor: pointer;
+  overflow: hidden;
 }
 .notification-bell {
   animation: bell 1s 1s both infinite;
